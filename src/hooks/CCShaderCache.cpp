@@ -380,6 +380,7 @@ class $modify(CCShaderCache) {
         }
     }
 
+#ifndef GEODE_IS_IOS
     void reloadDefaultShaders() {
         for (auto [t, n] : shaderTypes) {
             auto* p = this->programForKey(n);
@@ -387,4 +388,5 @@ class $modify(CCShaderCache) {
             loadShader(p, t);
         }
     }
+#endif
 };
